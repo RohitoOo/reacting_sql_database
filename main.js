@@ -19,16 +19,6 @@ connection.connect(err => {
   }
 })
 
-app.get("/", (req, res) => {
-  let results = connection.query(`SELECT * FROM employees`, (err, results) => {
-    if (err) {
-      console.log("WTF", err)
-    } else {
-      console.log(results)
-    }
-  })
-})
-
 app.listen(3000, () => {
   console.log("We Are Live On Port 3000")
 })
